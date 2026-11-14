@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">CYBER BANK L EDITION Boundary Fold L</title>
+  <desc id="desc">An asymmetric dossier fold with a geometric L boundary, vermilion authority rule, and cobalt evidence register.</desc>
+  <path fill="#14243B" d="M46 36h116l48 48v136H46z"/>
+  <path fill="#F5EFE3" d="M62 52h93l39 39v113H62z"/>
+  <path fill="#DDE5EB" d="M155 52v39h39z"/>
+  <path fill="none" stroke="#14243B" stroke-width="14" stroke-linecap="square" stroke-linejoin="miter" d="M94 80v87h68"/>
+  <path fill="none" stroke="#D94D33" stroke-width="8" stroke-linecap="square" d="M78 76v112h79"/>
+  <path fill="none" stroke="#D94D33" stroke-width="4" d="M78 58h91"/>
+  <path fill="none" stroke="#2458D3" stroke-width="6" stroke-linecap="square" d="M177 101v49"/>
+  <rect x="170" y="153" width="20" height="20" fill="#2458D3"/>
+  <path fill="#F5EFE3" d="M179 158h2v10h-2z"/>
+</svg>

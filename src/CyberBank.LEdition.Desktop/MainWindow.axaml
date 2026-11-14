@@ -1,0 +1,218 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="CyberBank.LEdition.Desktop.MainWindow"
+        x:CompileBindings="False"
+        Title="CYBER BANK L EDITION"
+        Width="1400" Height="820" MinWidth="1180" MinHeight="720"
+        Background="{DynamicResource CanvasBrush}"
+        Icon="/Assets/l-edition-icon.ico">
+  <Grid RowDefinitions="56,*">
+    <Border Background="{DynamicResource ChromeBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="0,0,0,1" Padding="18,0">
+      <Grid ColumnDefinitions="*,Auto,Auto" VerticalAlignment="Center">
+        <StackPanel Orientation="Horizontal" Spacing="10" VerticalAlignment="Center">
+          <Image Source="avares://CyberBank.LEdition.Desktop/Assets/l-edition-globe-l-clean-transparent.png" Width="30" Height="30" Stretch="Uniform" />
+          <StackPanel Spacing="1">
+            <TextBlock Text="CYBER BANK L EDITION" FontWeight="Bold" FontSize="13" />
+            <TextBlock Text="LOCAL AUTHORIZED-ASSESSMENT WORKSTATION" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="9" LetterSpacing="0.8" />
+          </StackPanel>
+        </StackPanel>
+        <Border Grid.Column="1" Background="{DynamicResource AccentSoftBrush}" CornerRadius="12" Padding="10,5" Margin="0,0,10,0">
+          <StackPanel Orientation="Horizontal" Spacing="6">
+            <Ellipse Width="6" Height="6" Fill="{DynamicResource StateBrush}" VerticalAlignment="Center" />
+            <TextBlock Text="LOCAL ONLY" Foreground="{DynamicResource TextPrimaryBrush}" FontFamily="Cascadia Mono" FontSize="10" />
+          </StackPanel>
+        </Border>
+        <StackPanel Grid.Column="2" Orientation="Horizontal" Spacing="8">
+          <Button x:Name="ThemeToggleButton" Classes="secondary" Content="Switch to dark" Click="ToggleTheme_Click" />
+          <Button Classes="primary" Content="Export snapshot" Click="ExportReport_Click" />
+        </StackPanel>
+      </Grid>
+    </Border>
+
+    <Grid Grid.Row="1" ColumnDefinitions="210,*,250">
+      <Border Background="{DynamicResource NavigationBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="0,0,1,0" Padding="16">
+        <Grid RowDefinitions="Auto,Auto,*,Auto">
+          <StackPanel Orientation="Horizontal" Spacing="10" Margin="2,0,0,18">
+            <Image Source="avares://CyberBank.LEdition.Desktop/Assets/l-edition-globe-l-clean-transparent.png" Width="48" Height="48" Stretch="Uniform" />
+            <StackPanel VerticalAlignment="Center" Spacing="3">
+              <TextBlock Text="L EDITION" FontWeight="Bold" FontSize="14" />
+              <TextBlock Text="CASE MANAGEMENT" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="9" LetterSpacing="0.8" />
+            </StackPanel>
+          </StackPanel>
+
+          <Border Grid.Row="1" Background="{DynamicResource PanelBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="6" Padding="10" Margin="0,0,0,14">
+            <StackPanel Spacing="3">
+              <TextBlock Text="ACTIVE CASE" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="9" LetterSpacing="0.7" />
+              <TextBlock Text="{Binding ActiveEngagementName}" FontWeight="SemiBold" FontSize="12" TextTrimming="CharacterEllipsis" />
+            </StackPanel>
+          </Border>
+
+          <StackPanel Grid.Row="2" Spacing="3">
+            <TextBlock Text="WORKSPACE" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="9" LetterSpacing="1" Margin="8,0,0,6" />
+            <Button Classes="nav active" Content="▦  Overview" />
+            <Button Classes="nav" Content="◌  Authorization &amp; scope" />
+            <Button Classes="nav" Content="▣  Declared materials" />
+            <Button Classes="nav" Content="⌁  Local evidence" />
+            <Button Classes="nav" Content="◇  Findings" />
+            <Button Classes="nav" Content="⇩  Reports" />
+            <Button Classes="nav" Content="≡  Activity ledger" />
+          </StackPanel>
+
+          <Border Grid.Row="3" Background="{DynamicResource AccentSoftBrush}" CornerRadius="6" Padding="11">
+            <StackPanel Spacing="4">
+              <TextBlock Text="SAFE WORKSPACE" FontSize="10" FontWeight="SemiBold" />
+              <TextBlock Text="No scans, target actions, uploads, credentials, or process launching." Foreground="{DynamicResource TextSecondaryBrush}" FontSize="10" TextWrapping="Wrap" />
+            </StackPanel>
+          </Border>
+        </Grid>
+      </Border>
+
+      <Border Grid.Column="1" Background="{DynamicResource CanvasBrush}" Padding="20" MinWidth="0">
+        <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" MinWidth="0">
+          <StackPanel Spacing="16">
+            <Grid ColumnDefinitions="*,Auto">
+              <StackPanel Spacing="4">
+                <TextBlock Text="ASSESSMENT OVERVIEW" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="10" LetterSpacing="1" />
+                <TextBlock Text="Record only what has been declared." FontSize="23" FontWeight="SemiBold" TextWrapping="Wrap" />
+                <TextBlock Text="Create an authorized case, preserve local evidence, and prepare an assessor-authored delivery snapshot." Foreground="{DynamicResource TextSecondaryBrush}" FontSize="12" TextWrapping="Wrap" />
+              </StackPanel>
+              <Border Grid.Column="1" Background="{DynamicResource PanelBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="6" Padding="10,7" VerticalAlignment="Center">
+                <TextBlock Text="{Binding ScopeStatusText}" Foreground="{DynamicResource StateBrush}" FontFamily="Cascadia Mono" FontSize="10" />
+              </Border>
+            </Grid>
+
+            <StackPanel Orientation="Horizontal" Spacing="4">
+              <Border Background="{DynamicResource TabActiveBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="5" Padding="10,6"><TextBlock Text="Overview" FontSize="11" FontWeight="SemiBold" /></Border>
+              <Border Background="Transparent" Padding="10,6"><TextBlock Text="Boundary" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="11" /></Border>
+              <Border Background="Transparent" Padding="10,6"><TextBlock Text="Materials" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="11" /></Border>
+              <Border Background="Transparent" Padding="10,6"><TextBlock Text="Findings" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="11" /></Border>
+              <Border Background="Transparent" Padding="10,6"><TextBlock Text="Delivery" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="11" /></Border>
+            </StackPanel>
+
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+              <Border Background="{DynamicResource PanelBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="7" Padding="14">
+                <StackPanel Spacing="6">
+                  <TextBlock Text="AUTHORIZATION" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="9" LetterSpacing="0.8" />
+                  <TextBlock Text="{Binding ScopeStatusText}" Foreground="{DynamicResource StateBrush}" FontSize="16" FontWeight="SemiBold" TextWrapping="Wrap" />
+                  <TextBlock Text="Written reference and declared scope are required before local evidence is accepted." Foreground="{DynamicResource TextSecondaryBrush}" FontSize="10" TextWrapping="Wrap" />
+                </StackPanel>
+              </Border>
+              <Border Grid.Column="1" Background="{DynamicResource PanelBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="7" Padding="14">
+                <StackPanel Spacing="6">
+                  <TextBlock Text="CASE MATERIAL" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="9" LetterSpacing="0.8" />
+                  <TextBlock Text="{Binding AssetStatusText}" FontSize="16" FontWeight="SemiBold" />
+                  <TextBlock Text="{Binding EvidenceStatusText}" Foreground="{DynamicResource TextSecondaryBrush}" FontFamily="Cascadia Mono" FontSize="10" TextTrimming="CharacterEllipsis" />
+                </StackPanel>
+              </Border>
+            </Grid>
+
+            <Border Background="{DynamicResource PanelBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="7" Padding="16">
+              <StackPanel Spacing="12">
+                <TextBlock Text="AUTHORIZED ENGAGEMENT" FontWeight="SemiBold" FontSize="14" />
+                <TextBlock Text="The case record is local. It does not initiate or automate testing actions." Foreground="{DynamicResource TextSecondaryBrush}" FontSize="11" />
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                  <StackPanel Spacing="5">
+                    <TextBlock Text="Engagement label" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="10" />
+                    <TextBox x:Name="EngagementNameInput" PlaceholderText="Authorized program or engagement" />
+                  </StackPanel>
+                  <StackPanel Grid.Column="1" Spacing="5">
+                    <TextBlock Text="Written authorization reference" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="10" />
+                    <TextBox x:Name="AuthorizationReferenceInput" PlaceholderText="Reference only — no secrets" />
+                  </StackPanel>
+                </Grid>
+                <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                  <StackPanel Spacing="5">
+                    <TextBlock Text="Declared in scope" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="10" />
+                    <TextBox x:Name="InScopeInput" Height="80" AcceptsReturn="True" TextWrapping="Wrap" PlaceholderText="One approved local description per line" />
+                  </StackPanel>
+                  <StackPanel Grid.Column="1" Spacing="5">
+                    <TextBlock Text="Explicitly out of scope" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="10" />
+                    <TextBox x:Name="OutOfScopeInput" Height="80" AcceptsReturn="True" TextWrapping="Wrap" PlaceholderText="Entries that must stay excluded" />
+                  </StackPanel>
+                </Grid>
+                <StackPanel Orientation="Horizontal" Spacing="10">
+                  <Button Classes="primary" Content="Create local authorized case" Click="CreateEngagement_Click" />
+                  <TextBlock x:Name="GateErrorText" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" FontSize="10" TextWrapping="Wrap" MaxWidth="280" />
+                </StackPanel>
+              </StackPanel>
+            </Border>
+
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+              <Border Background="{DynamicResource PanelBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="7" Padding="14">
+                <StackPanel Spacing="9">
+                  <TextBlock Text="DECLARED MATERIALS" FontWeight="SemiBold" FontSize="12" />
+                  <Grid ColumnDefinitions="*,*" ColumnSpacing="8">
+                    <TextBox x:Name="AssetLabelInput" PlaceholderText="Local label" />
+                    <TextBox Grid.Column="1" x:Name="AssetCategoryInput" Text="Application record" />
+                  </Grid>
+                  <TextBox x:Name="AssetScopeReferenceInput" PlaceholderText="Exact in-scope reference" />
+                  <StackPanel Orientation="Horizontal" Spacing="8">
+                    <Button Classes="secondary" Content="Register material" Click="CreateAsset_Click" />
+                    <TextBlock Text="{Binding LatestAssetLabel}" Foreground="{DynamicResource TextSecondaryBrush}" VerticalAlignment="Center" FontSize="10" TextTrimming="CharacterEllipsis" />
+                  </StackPanel>
+                </StackPanel>
+              </Border>
+              <Border Grid.Column="1" Background="{DynamicResource PanelBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="7" Padding="14">
+                <StackPanel Spacing="9">
+                  <TextBlock Text="FINDING DRAFT" FontWeight="SemiBold" FontSize="12" />
+                  <TextBox x:Name="FindingTitleInput" PlaceholderText="Assessor-authored finding title" />
+                  <Grid ColumnDefinitions="*,*" ColumnSpacing="8">
+                    <TextBox x:Name="FindingSeverityInput" Text="Medium" />
+                    <TextBox Grid.Column="1" x:Name="FindingEvidenceReferenceInput" PlaceholderText="Optional local evidence ID" />
+                  </Grid>
+                  <TextBox x:Name="FindingImpactInput" Height="54" AcceptsReturn="True" TextWrapping="Wrap" PlaceholderText="Impact narrative" />
+                  <TextBox x:Name="FindingRemediationInput" Height="54" AcceptsReturn="True" TextWrapping="Wrap" PlaceholderText="Remediation note" />
+                  <Button Classes="primary" Content="Add finding draft" HorizontalAlignment="Left" Click="CreateFinding_Click" />
+                </StackPanel>
+              </Border>
+            </Grid>
+          </StackPanel>
+        </ScrollViewer>
+      </Border>
+
+      <Border Grid.Column="2" Background="{DynamicResource PanelMutedBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1,0,0,0" Padding="16">
+        <Grid RowDefinitions="Auto,Auto,*,Auto">
+          <StackPanel Spacing="4">
+            <TextBlock Text="CONTEXT INSPECTOR" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="10" LetterSpacing="0.8" />
+            <TextBlock Text="Local case state" FontSize="15" FontWeight="SemiBold" />
+          </StackPanel>
+          <StackPanel Grid.Row="1" Spacing="8" Margin="0,16,0,14">
+            <Border Background="{DynamicResource PanelBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="6" Padding="10">
+              <StackPanel Spacing="3">
+                <TextBlock Text="EVIDENCE" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="9" />
+                <TextBlock Text="{Binding LatestEvidenceName}" FontFamily="Cascadia Mono" FontSize="10" TextTrimming="CharacterEllipsis" />
+              </StackPanel>
+            </Border>
+            <Button Classes="secondary" Content="Select local evidence" Click="ImportEvidence_Click" />
+            <Border Background="{DynamicResource PanelBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="6" Padding="10">
+              <StackPanel Spacing="3">
+                <TextBlock Text="FINDINGS" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="9" />
+                <TextBlock Text="{Binding FindingStatusText}" FontSize="12" FontWeight="SemiBold" />
+                <TextBlock Text="{Binding LatestFindingTitle}" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="10" TextTrimming="CharacterEllipsis" />
+              </StackPanel>
+            </Border>
+          </StackPanel>
+          <Border Grid.Row="2" Background="{DynamicResource PanelBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="6" Padding="10">
+            <StackPanel Spacing="8">
+              <TextBlock Text="ACTIVITY" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="9" LetterSpacing="0.7" />
+              <ItemsControl ItemsSource="{Binding ActivityEntries}">
+                <ItemsControl.ItemTemplate>
+                  <DataTemplate>
+                    <StackPanel Orientation="Horizontal" Spacing="7" Margin="0,3">
+                      <Ellipse Width="5" Height="5" Fill="{DynamicResource StateBrush}" VerticalAlignment="Center" />
+                      <TextBlock Text="{Binding}" FontSize="10" TextWrapping="Wrap" MaxWidth="150" />
+                    </StackPanel>
+                  </DataTemplate>
+                </ItemsControl.ItemTemplate>
+              </ItemsControl>
+              <TextBlock Text="No synthetic events or external telemetry." Foreground="{DynamicResource TextSecondaryBrush}" FontSize="10" TextWrapping="Wrap" />
+            </StackPanel>
+          </Border>
+          <Border Grid.Row="3" Background="{DynamicResource AccentSoftBrush}" CornerRadius="6" Padding="10" Margin="0,14,0,0">
+            <TextBlock Text="Reports are local JSON and Markdown snapshots only." FontSize="10" TextWrapping="Wrap" />
+          </Border>
+        </Grid>
+      </Border>
+    </Grid>
+  </Grid>
+</Window>

@@ -1,0 +1,60 @@
+# CYBER BANK L EDITION — Delivery TODO
+
+- [x] Create the isolated .NET 10 / Avalonia solution with Domain, Application, Infrastructure, CLI, Desktop, and matching xUnit test projects.
+- [x] Add Windows restore/build/test command wrappers that set the required `ProgramFiles*` and MSBuild environment variables.
+- [x] Fix the domain test runner so it restores with the local NuGet source before running `dotnet test --no-restore`.
+- [x] Fix the initial xUnit test harness import so the authorization contract reaches its intended RED assertion.
+- [x] Establish the engagement authorization contract with test-first validation for an authorization reference and a non-empty in-scope list.
+- [x] Preserve in-scope and out-of-scope entries as separate records and expose a tested `ScopeReadiness` state.
+- [x] Persist a local project manifest and append-only activity ledger without introducing network or process-launch dependencies.
+- [x] Fix activity-ledger serialization so every event remains one valid JSONL line while the human-readable manifest can stay formatted.
+- [x] Implement non-executing local evidence metadata import with SHA-256 provenance, a protected project copy, and audit entry.
+- [x] Add assessor-authored findings with evidence links, severity, remediation notes, and reviewer lifecycle states.
+- [x] Add a declared Asset Register that links an assessor-entered local label to an existing in-scope boundary and rejects URL/IP-style target entries.
+- [x] Include declared assets in local JSON and Markdown report snapshots without adding any target or network fields.
+- [x] Surface a local Activity Ledger in the Workstation from engagement, asset, evidence, finding, and report-snapshot events.
+- [x] Export local JSON and Markdown report snapshots containing scope, evidence provenance, findings, remediation, audit history, and output hash.
+- [x] Implement the native Avalonia Engagement Gate and five-zone authorized-assessment Workstation with blocked/ready states.
+- [x] Fix the Workstation width budget so the Context / Evidence Rail and top-right status controls remain visible at a 1494px desktop window.
+- [x] Diagnose and fix the first Avalonia Desktop build error before visual verification.
+- [x] Replace deprecated Avalonia text-input placeholder properties so the Desktop build is warning-free.
+- [x] Replace the unsupported runtime SVG image load with a code-authored XAML Globe-L mark so the Desktop executable stays stable without an SVG decoder dependency.
+- [x] Fix the local visual-capture diagnostic dependency so the running Desktop window can be reviewed without a full-screen capture.
+- [x] Build and visually review the original code-authored scope-boundary Globe-L vector prototype before final identity integration.
+- [x] Implement a restricted local CLI for project creation/validation, evidence import, and report export; reject any target, URL, IP, credential, payload, shell command, or scanner configuration.
+- [x] Align LocalCliExecutor calls with the existing local-project persistence API and restore CLI test compilation.
+- [x] Add a Windows CLI-test runner so parser contracts run with the same controlled restore environment as the other projects.
+- [x] Align the LocalCliHelp public API with the tested `Text` property contract.
+- [ ] Add accessibility, keyboard focus, precise error states, and local-only status signals to the Desktop workflow.
+- [x] Run complete xUnit, build, and Windows desktop acceptance verification; capture exact output and fix all regressions.
+- [x] Publish a self-contained win-x64 build, produce a lowest-privilege installer, silently install it, launch it, and record smoke evidence.
+- [x] Persist full asset and finding collections across a local application restart, then restore them into the Workstation and report export flow.
+- [x] Retire the rejected dark-aqua visual language, panel arrangement, and existing Globe-L from the active desktop shell; do not reuse them in the redesign.
+- [x] Create a completely new L EDITION identity system with a distinct palette, geometry, typography, and workstation composition that communicates authorized assessment work without generic cyber motifs.
+- [x] Rebuild all native Workstation views from the new visual system while preserving the tested local-only engagement, evidence, asset, finding, report, and CLI contracts.
+- [ ] Perform a fresh Windows visual review of empty, scope-ready, evidence, and report states before repackaging the redesigned installer.
+- [ ] Fix Editorial Casefile width budgeting so the document title, authorization fields, and header status remain fully visible at a 1494px Windows viewport.
+- [ ] Diagnose and fix the Editorial Casefile runtime exit before completing the responsive visual review.
+- [x] Replace the rejected Editorial Casefile direction with the owner-supplied graphite Globe-L reference: professionally crop and integrate its symbol with clean alpha for the EXE and application chrome.
+- [x] Rebuild the desktop hierarchy around the owner reference’s dark graphite, ice-blue, and restrained violet atmosphere while keeping all visible records locally authored and non-operational.
+- [x] Constrain the Graphite Globe-L workspace and compact the top command bar so all cards, controls, and local status fit within the reviewed 1194px Windows viewport.
+- [x] Replace the rejected screenshot-card logo with a true transparent Globe-L asset containing only the globe, L, and shield; remove all square-frame/background pixels before Windows icon integration.
+- [x] Review the owner-provided Desktop template reference, select one information architecture suitable for the local assessment workstation, and document the choice without copying its artwork or sample data.
+- [x] Replace all current Graphite Globe-L styling with a white interface and lime-green visual system throughout the Desktop shell, logo treatment, states, and installer assets.
+- [x] Rebuild the complete Windows UI around the selected template’s hierarchy while retaining only the tested local authorization, scope, asset, evidence, finding, report, activity, and restricted CLI workflows.
+- [x] Add a real theme switcher with a white/lime Light theme and a black/blue Dark theme, preserving accessible contrast and identical local-only workflow states in both themes.
+- [x] Diagnose and fix the first Material Light/Dark Avalonia build error before launching the redesigned shell.
+- [x] Diagnose and fix the Material Light/Dark runtime exit before capturing the Light theme.
+- [ ] Fix Material three-column width budgeting so the Context Inspector remains fully visible at the reviewed 1134px Windows viewport in both themes.
+- [x] Add a local-first Login screen before the Workstation, with test-first credential validation, explicit locked/unlocked state, and no remote authentication dependency.
+- [x] Fix the LocalLoginService reflection test helper so it accepts the real result object rather than requiring an exact `object` runtime type.
+- [x] Enlarge the professionally isolated Globe-L on the Login screen and retain only a compact transparent instance in the Workstation chrome.
+- [x] Fix LoginWindow DPI width budgeting so the entire local-access form remains visible in the reviewed 894px Windows viewport.
+- [ ] Fix the Login-to-Workstation handoff so MainWindow opens in a normal, visible desktop state without requiring a restore action.
+- [ ] Ensure the Context Inspector is visibly present in the Workstation at the reviewed desktop width before calling the Material layout complete.
+- [x] Persist declared assets, evidence metadata, and findings together under the local project manifest so report-ready work survives a restart.
+- [x] Diagnose and fix the Workstation persistence build error before testing project reopen in the desktop flow.
+- [x] Fix the project-snapshot test helper so the RED assertion reaches the missing persistence API rather than failing on xUnit’s void `Assert.NotNull` overload.
+- [x] Add a real local end-to-end acceptance workflow covering first profile creation, unlock, engagement, asset, evidence, finding, report, reopen, and Dark theme verification.
+- [x] Rebuild the self-contained installer only after the new Login, themes, persistence, and end-to-end workflow pass verification.
+- [x] Freeze CYBER BANK L EDITION Alpha 0.1.1 as the user-accepted baseline; defer visual refinement to specific future feedback rather than further autonomous redesign.

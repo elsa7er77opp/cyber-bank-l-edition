@@ -1,0 +1,58 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="CyberBank.LEdition.Desktop.LoginWindow"
+        x:CompileBindings="False"
+        Title="CYBER BANK L EDITION — Local Login"
+        Width="1100" Height="700" MinWidth="940" MinHeight="600"
+        Background="{DynamicResource CanvasBrush}"
+        Icon="/Assets/l-edition-icon.ico">
+  <Grid RowDefinitions="54,*">
+    <Border Background="{DynamicResource ChromeBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="0,0,0,1" Padding="18,0">
+      <Grid ColumnDefinitions="*,Auto" VerticalAlignment="Center">
+        <StackPanel Orientation="Horizontal" Spacing="8" VerticalAlignment="Center">
+          <Image Source="avares://CyberBank.LEdition.Desktop/Assets/l-edition-globe-l-clean-transparent.png" Width="26" Height="26" Stretch="Uniform" />
+          <TextBlock Text="CYBER BANK L EDITION" FontWeight="Bold" FontSize="13" />
+        </StackPanel>
+        <Button Grid.Column="1" x:Name="ThemeToggleButton" Classes="secondary" Content="Switch to dark" Click="ToggleTheme_Click" />
+      </Grid>
+    </Border>
+
+    <Grid Grid.Row="1" ColumnDefinitions="370,*" Margin="24">
+      <Border Background="{DynamicResource AccentSoftBrush}" CornerRadius="12" Padding="22" Margin="0,0,16,0">
+        <StackPanel VerticalAlignment="Center" Spacing="14">
+          <Image Source="avares://CyberBank.LEdition.Desktop/Assets/l-edition-globe-l-clean-transparent.png" Width="190" Height="190" Stretch="Uniform" HorizontalAlignment="Center" />
+          <TextBlock Text="CYBER BANK L EDITION" FontWeight="Bold" FontSize="19" HorizontalAlignment="Center" />
+          <TextBlock Text="Local authorized-assessment workstation" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="12" HorizontalAlignment="Center" />
+          <Border Background="{DynamicResource PanelBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="7" Padding="12" Margin="0,8,0,0">
+            <TextBlock Text="Your local profile protects access to case records on this device. No account, cloud sync, network login, or credential upload is involved." Foreground="{DynamicResource TextSecondaryBrush}" FontSize="10" TextWrapping="Wrap" TextAlignment="Center" />
+          </Border>
+        </StackPanel>
+      </Border>
+
+      <Border Grid.Column="1" Background="{DynamicResource PanelBrush}" BorderBrush="{DynamicResource BorderBrush}" BorderThickness="1" CornerRadius="12" Padding="24">
+        <StackPanel VerticalAlignment="Center" Spacing="15">
+          <TextBlock x:Name="LoginEyebrow" Text="LOCAL ACCESS" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="10" LetterSpacing="1" />
+          <TextBlock x:Name="LoginTitle" Text="Create your local operator profile" FontSize="22" FontWeight="SemiBold" TextWrapping="Wrap" />
+          <TextBlock x:Name="LoginDescription" Text="Set a display name and a local passphrase. The passphrase is not saved as text." Foreground="{DynamicResource TextSecondaryBrush}" FontSize="11" TextWrapping="Wrap" Margin="0,0,0,4" />
+
+          <StackPanel x:Name="DisplayNameSection" Spacing="5">
+            <TextBlock Text="Display name" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="10" />
+            <TextBox x:Name="DisplayNameInput" PlaceholderText="Your local workspace name" />
+          </StackPanel>
+          <StackPanel Spacing="5">
+            <TextBlock Text="Local passphrase" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="10" />
+            <TextBox x:Name="PassphraseInput" PasswordChar="●" PlaceholderText="At least 12 characters" />
+          </StackPanel>
+          <StackPanel x:Name="ConfirmPassphraseSection" Spacing="5">
+            <TextBlock Text="Confirm local passphrase" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="10" />
+            <TextBox x:Name="ConfirmPassphraseInput" PasswordChar="●" PlaceholderText="Repeat local passphrase" />
+          </StackPanel>
+
+          <TextBlock x:Name="LoginMessageText" Foreground="{DynamicResource TextSecondaryBrush}" FontSize="10" TextWrapping="Wrap" />
+          <Button x:Name="LoginButton" Classes="primary" Content="Create local profile" Click="LoginButton_Click" HorizontalAlignment="Stretch" />
+          <TextBlock Text="Local profile data stays on this device. This does not replace authorization from a client or program." Foreground="{DynamicResource TextSecondaryBrush}" FontSize="10" TextWrapping="Wrap" TextAlignment="Center" Margin="0,6,0,0" />
+        </StackPanel>
+      </Border>
+    </Grid>
+  </Grid>
+</Window>

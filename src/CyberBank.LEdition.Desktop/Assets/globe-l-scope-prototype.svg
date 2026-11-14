@@ -1,0 +1,29 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">CYBER BANK L EDITION scope-boundary Globe-L prototype</title>
+  <desc id="desc">A dark globe grid interrupted by a teal declared-scope ring and a slanted L route.</desc>
+  <defs>
+    <clipPath id="globeClip">
+      <circle cx="256" cy="256" r="178" />
+    </clipPath>
+  </defs>
+
+  <circle cx="256" cy="256" r="178" fill="#0C1A20" stroke="#3C6670" stroke-width="8" />
+
+  <g clip-path="url(#globeClip)" stroke="#2B4D56" stroke-width="8" opacity="0.96">
+    <ellipse cx="256" cy="256" rx="76" ry="178" />
+    <ellipse cx="256" cy="256" rx="142" ry="178" />
+    <path d="M78 186H434" />
+    <path d="M78 256H434" />
+    <path d="M78 326H434" />
+    <path d="M96 150C181 204 331 204 416 150" />
+    <path d="M96 362C181 308 331 308 416 362" />
+  </g>
+
+  <path d="M126 350C98 318 78 278 78 232C78 147 148 78 233 78" stroke="#77D9C5" stroke-width="16" stroke-linecap="round" />
+  <path d="M279 78C365 89 434 162 434 250C434 287 423 321 403 350" stroke="#77D9C5" stroke-width="16" stroke-linecap="round" />
+  <path d="M402 350L434 350" stroke="#77D9C5" stroke-width="16" stroke-linecap="round" />
+
+  <path d="M292 142L238 340H360" stroke="#E4F2F1" stroke-width="34" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="124" cy="350" r="11" fill="#77D9C5" />
+  <circle cx="405" cy="350" r="11" fill="#77D9C5" />
+</svg>

@@ -1,0 +1,17 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/CyberBank.LEdition.Application/CyberBank.LEdition.Application.csproj" />
+    <Project Path="src/CyberBank.LEdition.Domain/CyberBank.LEdition.Domain.csproj" />
+    <Project Path="src/CyberBank.LEdition.Infrastructure/CyberBank.LEdition.Infrastructure.csproj" />
+    <Project Path="src/CyberBank.LEdition.Cli/CyberBank.LEdition.Cli.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/CyberBank.LEdition.Application.Tests/CyberBank.LEdition.Application.Tests.csproj" />
+    <Project Path="tests/CyberBank.LEdition.Domain.Tests/CyberBank.LEdition.Domain.Tests.csproj" />
+    <Project Path="tests/CyberBank.LEdition.Infrastructure.Tests/CyberBank.LEdition.Infrastructure.Tests.csproj" />
+    <Project Path="tests/CyberBank.LEdition.Desktop.Tests/CyberBank.LEdition.Desktop.Tests.csproj" />
+    <Project Path="tests/CyberBank.LEdition.Cli.Tests/CyberBank.LEdition.Cli.Tests.csproj" />
+  </Folder>
+  <Project Path="src/CyberBank.LEdition/CyberBank.LEdition.csproj" />
+  <Project Path="src/CyberBank.LEdition.Desktop/CyberBank.LEdition.Desktop.csproj" />
+</Solution>

@@ -1,0 +1,96 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="CyberBank.LEdition.Desktop.App"
+             RequestedThemeVariant="Light">
+  <Application.Resources>
+    <ResourceDictionary>
+      <ResourceDictionary.ThemeDictionaries>
+        <ResourceDictionary x:Key="Light">
+          <SolidColorBrush x:Key="CanvasBrush" Color="#F7F9FC" />
+          <SolidColorBrush x:Key="ChromeBrush" Color="#FFFFFF" />
+          <SolidColorBrush x:Key="NavigationBrush" Color="#F1F4F8" />
+          <SolidColorBrush x:Key="PanelBrush" Color="#FFFFFF" />
+          <SolidColorBrush x:Key="PanelMutedBrush" Color="#F5F8FB" />
+          <SolidColorBrush x:Key="TextPrimaryBrush" Color="#162033" />
+          <SolidColorBrush x:Key="TextSecondaryBrush" Color="#5E6C80" />
+          <SolidColorBrush x:Key="BorderBrush" Color="#DDE4EE" />
+          <SolidColorBrush x:Key="AccentBrush" Color="#9BEA22" />
+          <SolidColorBrush x:Key="AccentInkBrush" Color="#132300" />
+          <SolidColorBrush x:Key="AccentSoftBrush" Color="#EFFBD7" />
+          <SolidColorBrush x:Key="StateBrush" Color="#56A800" />
+          <SolidColorBrush x:Key="FocusBrush" Color="#65B30B" />
+          <SolidColorBrush x:Key="TabActiveBrush" Color="#FFFFFF" />
+        </ResourceDictionary>
+        <ResourceDictionary x:Key="Dark">
+          <SolidColorBrush x:Key="CanvasBrush" Color="#0B1020" />
+          <SolidColorBrush x:Key="ChromeBrush" Color="#111A2E" />
+          <SolidColorBrush x:Key="NavigationBrush" Color="#0E1628" />
+          <SolidColorBrush x:Key="PanelBrush" Color="#151F35" />
+          <SolidColorBrush x:Key="PanelMutedBrush" Color="#10192B" />
+          <SolidColorBrush x:Key="TextPrimaryBrush" Color="#E7F0FF" />
+          <SolidColorBrush x:Key="TextSecondaryBrush" Color="#9FB2CE" />
+          <SolidColorBrush x:Key="BorderBrush" Color="#273652" />
+          <SolidColorBrush x:Key="AccentBrush" Color="#4EA4FF" />
+          <SolidColorBrush x:Key="AccentInkBrush" Color="#071525" />
+          <SolidColorBrush x:Key="AccentSoftBrush" Color="#172B48" />
+          <SolidColorBrush x:Key="StateBrush" Color="#66C2FF" />
+          <SolidColorBrush x:Key="FocusBrush" Color="#78B8FF" />
+          <SolidColorBrush x:Key="TabActiveBrush" Color="#19263F" />
+        </ResourceDictionary>
+      </ResourceDictionary.ThemeDictionaries>
+    </ResourceDictionary>
+  </Application.Resources>
+  <Application.Styles>
+    <FluentTheme />
+    <Style Selector="TextBlock">
+      <Setter Property="FontFamily" Value="Bahnschrift" />
+      <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+    </Style>
+    <Style Selector="TextBlock.mono">
+      <Setter Property="FontFamily" Value="Cascadia Mono" />
+    </Style>
+    <Style Selector="Button.primary">
+      <Setter Property="Background" Value="{DynamicResource AccentBrush}" />
+      <Setter Property="Foreground" Value="{DynamicResource AccentInkBrush}" />
+      <Setter Property="FontWeight" Value="SemiBold" />
+      <Setter Property="Padding" Value="14,9" />
+      <Setter Property="BorderThickness" Value="0" />
+      <Setter Property="CornerRadius" Value="5" />
+    </Style>
+    <Style Selector="Button.secondary">
+      <Setter Property="Background" Value="{DynamicResource PanelBrush}" />
+      <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+      <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+      <Setter Property="BorderThickness" Value="1" />
+      <Setter Property="Padding" Value="12,8" />
+      <Setter Property="CornerRadius" Value="5" />
+    </Style>
+    <Style Selector="Button.nav">
+      <Setter Property="Background" Value="Transparent" />
+      <Setter Property="Foreground" Value="{DynamicResource TextSecondaryBrush}" />
+      <Setter Property="BorderThickness" Value="0" />
+      <Setter Property="Padding" Value="10,9" />
+      <Setter Property="HorizontalContentAlignment" Value="Left" />
+      <Setter Property="FontSize" Value="13" />
+      <Setter Property="CornerRadius" Value="5" />
+    </Style>
+    <Style Selector="Button.nav.active">
+      <Setter Property="Background" Value="{DynamicResource AccentSoftBrush}" />
+      <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+      <Setter Property="FontWeight" Value="SemiBold" />
+    </Style>
+    <Style Selector="TextBox">
+      <Setter Property="Background" Value="{DynamicResource PanelBrush}" />
+      <Setter Property="Foreground" Value="{DynamicResource TextPrimaryBrush}" />
+      <Setter Property="BorderBrush" Value="{DynamicResource BorderBrush}" />
+      <Setter Property="BorderThickness" Value="1" />
+      <Setter Property="CornerRadius" Value="4" />
+      <Setter Property="Padding" Value="9,7" />
+      <Setter Property="FontFamily" Value="Bahnschrift" />
+    </Style>
+    <Style Selector="TextBox:focus">
+      <Setter Property="BorderBrush" Value="{DynamicResource FocusBrush}" />
+      <Setter Property="BorderThickness" Value="2" />
+    </Style>
+  </Application.Styles>
+</Application>
